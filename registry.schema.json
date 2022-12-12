@@ -1,0 +1,44 @@
+{
+  "$id": "null",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "document": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Name of document."
+        },
+        "description": {
+          "type": "string",
+          "description": "Decription of document."
+        },
+        "maintainer": {
+          "type": "string",
+          "description": "Name of the maintainer of the document."
+        },
+        "repo": {
+          "type": "string",
+          "description": "URL to the repository of project"
+        }
+      }
+    },
+    "networks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/network" }
+    }
+  },
+  "$defs": {
+    "network": {
+      "title": "Organization",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of your organization."
+        }
+      }
+    }
+  }
+}
