@@ -3,7 +3,7 @@ export interface Network {
   name: string;
   desc?: string;
   wss: string[] | string;
-  rpc?: string[] | string;
+  rpc: string[] | string;
   explorer?: string;
   repo?: string;
   faucet?: string | null;

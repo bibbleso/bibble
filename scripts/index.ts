@@ -1,4 +1,3 @@
-import { constants } from 'buffer';
 import fs from 'fs';
 import _ from 'lodash';
 import path from 'path';
@@ -35,5 +34,3 @@ fs.writeFileSync(
   path.join(__dirname, '..', 'src', 'networks.json'),
   JSON.stringify(generateDocument())
 );
-
-export {};
