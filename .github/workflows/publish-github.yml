@@ -1,7 +1,7 @@
 name: Publish to Github
 on:
   release:
-    types: [ created ]
+    types: [created]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,11 +15,10 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@thebettermint'
+          scope: '@bibbleso'
       - name: Build package
         run: |
           npm install
-          npm run prepublish
       - name: Publish package on NPM 📦
         run: npm publish
         env:

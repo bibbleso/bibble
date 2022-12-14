@@ -31,11 +31,6 @@ const combineNetworks = () => _.merge(networksObj);
 const generateDocument = () =>
   Object.assign(documentHeader, { networks: combineNetworks() });
 
-const test = () => {
-  console.log(generateDocument());
-};
-
-test();
 fs.writeFileSync(
   path.join(__dirname, '..', 'src', 'networks.json'),
   JSON.stringify(generateDocument())
