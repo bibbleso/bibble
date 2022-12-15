@@ -8,19 +8,24 @@ const SOURCE_NAME = 'networks.json';
 // read all networks json
 const networks = require(path.join(__dirname, '..', SOURCE_NAME)).networks;
 
+// available networks
+const availableNetworks: string[] | undefined = networks.map(
+  (network: Network) => network.name
+);
+
 // instantiate usable map of wss
-const wssMap: Map<string, string> = new Map();
+const wssMap: Map<string, string | null | undefined> = new Map();
 networks.forEach((network: Network) => {
-  if (typeof network.wss === 'string')
+  if (typeof network.wss === 'string' || !network.wss)
     return wssMap.set(network.name, network.wss);
   return wssMap.set(network.name, network.wss[0]);
 });
 const wssObj = Object.fromEntries(wssMap);
 
 // instantiate usable map of rpc
-const rpcMap: Map<string, string> = new Map();
+const rpcMap: Map<string, string | null | undefined> = new Map();
 networks.forEach((network: Network) => {
-  if (typeof network.rpc === 'string')
+  if (typeof network.rpc === 'string' || !network.rpc)
     return rpcMap.set(network.name, network.rpc);
   return rpcMap.set(network.name, network.rpc[0]);
 });
@@ -39,17 +44,12 @@ const getKey: any = (map: Map<any, any>, value: any): any => {
   }
 };
 
-// available networks
-const availableNetworks: string[] | undefined = networks.map(
-  (network: Network) => network.name
-);
-
 // find network by id
-const clientStringbyId = (id: number): string | undefined =>
+const clientStringbyId = (id: number): string | undefined | null =>
   wssMap.get(getKey(idMap, id));
 
 // find network by name
-const clientStringbyName = (name: string): string | undefined =>
+const clientStringbyName = (name: string): string | undefined | null =>
   wssMap.get(name);
 
 export {

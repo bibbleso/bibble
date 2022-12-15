@@ -1,0 +1,24 @@
+{
+  "id": null,
+  "name": "xevm",
+  "desc": "The Ethereum Virtual Machine (EVM) compatible XRP Ledger sidechain is a secure and fast public blockchain that brings all kinds of web3 applications to the XRP Ledger community.",
+  "wss": null,
+  "rpc": "https://rpc-evm-sidechain.xrpl.org ",
+  "explorer": "https://evm-sidechain.xrpl.org ",
+  "repo": "https://github.com/Peersyst/xrp-evm-archive/blob/main/devnet",
+  "faucet": null,
+  "peers": {
+    "default": [
+      "a91aec8c83957561eefb89f66558d9b561dcec55@evm-sidechain-validator-0.peersyst.tech:26656",
+      "f00b27159fc247c8e80d5495073f12a430d887de@evm-sidechain-validator-1.peersyst.tech:26656",
+      "27b9b345ff32adbe59262b9c60e9fb5ecb312dc8@evm-sidechain-validator-2.peersyst.tech:26656",
+      "150d7cc529283832ec9a0d317e86bdf0df0de7f1@evm-sidechain-validator-3.peersyst.tech:26656",
+      "bc19ff3dafa9184188e93b0ce6c8e9017101d87e@evm-sidechain-validator-4.peersyst.tech:26656",
+      "6efd634ab66197c6508fefa1b698180e207e1eb5@evm-sidechain-validator-5.peersyst.tech:26656",
+      "f3bd3efd385246556fc819ff7732d176c88d5fca@evm-sidechain-validator-6.peersyst.tech:26656",
+      "055597ce3843786104e23b2dea7aa1d8cab00c83@evm-sidechain-validator-7.peersyst.tech:26656",
+      "3abadd5b5ba5114c48a0ec94b8001769be7f2afe@evm-sidechain-validator-8.peersyst.tech:26656",
+      "46b21b8974cd2e244a6d45e3b5123c257a654f5f@evm-sidechain-validator-9.peersyst.tech:26656"
+    ]
+  }
+}

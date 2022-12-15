@@ -1,3 +1,3 @@
-import Networks from './networks';
+import Registry, { Network } from './networks';
 
-export { Networks };
+export { Registry, Network };

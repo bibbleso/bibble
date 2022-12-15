@@ -2,12 +2,13 @@ export interface Network {
   id: number | null;
   name: string;
   desc?: string;
-  wss: string[] | string;
-  rpc: string[] | string;
+  wss: string[] | string | null;
+  rpc: string[] | string | null;
   explorer?: string;
   repo?: string;
   faucet?: string | null;
   vl?: {};
+  peers?: {};
 }
 
 export default interface Registry {
