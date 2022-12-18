@@ -1,6 +1,8 @@
 {
   "id": 0,
   "name": "mainnet",
+  "type": "main",
+  "status": "live",
   "desc": "The XRP Ledger, a decentralized cryptographic ledger powered by a network of peer-to-peer servers and the home of XRP.",
   "wss": [
     "wss://xrplcluster.com/",

@@ -1,6 +1,8 @@
 {
   "id": 1,
   "name": "testnet",
+  "type": "development",
+  "status": "live",
   "desc": "An 'alternate universe' network that acts as a testing ground for software built on the XRP Ledger, without impacting production XRP Ledger users and without risking real money. The amendment status of the Testnet is intended to closely mirror the Mainnet, although slight variations in timing may occur due to the unpredictable nature of decentralized systems.",
   "wss": ["wss://s.altnet.rippletest.net:51233"],
   "rpc": ["https://s.altnet.rippletest.net:51234/"],

@@ -1,6 +1,8 @@
 {
   "id": null,
   "name": "amm",
+  "type": "development",
+  "status": "live",
   "desc": "A preview of the XLS-30d standard for a native AMM on the XRP Ledger.",
   "wss": ["wss://amm.devnet.rippletest.net:51233"],
   "rpc": ["http://amm.devnet.rippletest.net:51234"],

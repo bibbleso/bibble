@@ -8,7 +8,6 @@ const SOURCE_FOLDER = 'src/networks';
 
 // some helpful functions
 const isJson = (file: any) => /.json$/.test(file);
-const removeExtension = (file: any) => file.split('.')[0];
 
 // getting all networks
 const networks = fs.readdirSync(SOURCE_FOLDER).filter(isJson);

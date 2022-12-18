@@ -1,6 +1,8 @@
 {
   "id": 2,
   "name": "devnet",
+  "type": "development",
+  "status": "live",
   "desc": "A preview of coming attractions, where unstable changes to the core XRP Ledger software may be tested out. Developers can use this altnet to interact with and learn about planned new XRP Ledger features and amendments that are not yet enabled on the Mainnet.",
   "wss": ["wss://s.devnet.rippletest.net:51233"],
   "rpc": ["https://s.devnet.rippletest.net:51234/"],

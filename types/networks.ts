@@ -1,6 +1,8 @@
 export interface Network {
   id: number | null;
   name: string;
+  type: string;
+  status: string;
   desc?: string;
   wss: string[] | string | null;
   rpc: string[] | string | null;

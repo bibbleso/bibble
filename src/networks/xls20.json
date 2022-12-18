@@ -1,6 +1,8 @@
 {
   "id": 8,
   "name": "xls20",
+  "type": "development",
+  "status": "live",
   "desc": "A preview of the XLS-20d standard for non-fungible tokens on the XRP Ledger.",
   "wss": "wss://xls20-sandbox.rippletest.net:51233",
   "rpc": "http://xls20-sandbox.rippletest.net:51234",

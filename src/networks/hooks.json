@@ -1,6 +1,8 @@
 {
   "id": 225,
   "name": "hooks",
+  "type": "development",
+  "status": "live",
   "desc": "The XRPL Labs Hooks V2 staging net  runs a beta of the Hooks amendment, as well as all other XRP Ledger features. New amendments like XLS-20 (NFT’s) are also active on the Hooks V2 staging net.",
   "wss": ["wss://hooks-testnet-v2.xrpl-labs.com"],
   "rpc": ["https://hooks-testnet-v2.xrpl-labs.com"],
