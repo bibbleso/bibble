@@ -1,4 +1,4 @@
-const id = 'wss://xrplcluster.com/';
+const id = 'wss://s.altnet.rippletest.net:51233';
 const name = 'wss://s.altnet.rippletest.net:51233';
 const networks = [
   'mainnet',

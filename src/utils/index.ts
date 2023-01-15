@@ -3,7 +3,7 @@ import { Network } from '../../types/networks';
 import registry from '../networks.json';
 
 // read all networks json
-const networks = registry.networks;
+export const networks = registry.networks;
 
 // available networks
 const availableNetworks: string[] | undefined = networks.map(
@@ -13,10 +13,12 @@ const availableNetworks: string[] | undefined = networks.map(
 // instantiate usable map of wss
 const wssMap: Map<string, string | null | undefined> = new Map();
 networks.forEach((network: Network) => {
-  if (typeof network.wss === 'string' || !network.wss)
+  if (typeof network.wss === 'string' || !network.wss) {
     return wssMap.set(network.name, network.wss);
+  }
   return wssMap.set(network.name, network.wss[0]);
 });
+
 const wssObj = Object.fromEntries(wssMap);
 
 // instantiate usable map of rpc
@@ -42,18 +44,28 @@ const getKey: any = (map: Map<any, any>, value: any): any => {
 };
 
 // find network by id
-const clientStringbyId = (id: number): string | undefined | null =>
+const getClientStringbyId = (id: number): string | undefined | null =>
   wssMap.get(getKey(idMap, id));
 
 // find network by name
-const clientStringbyName = (name: string): string | undefined | null =>
+const getClientStringbyName = (name: string): string | undefined | null =>
   wssMap.get(name);
+
+// find network by wss
+const getNetworkNameByWss = (wss: string): string | undefined | null =>
+  getKey(wssMap, wss);
+
+// find network by wss
+const getRpcWithWssString = (wss: string): string | undefined | null =>
+  rpcMap.get(getKey(wssMap, wss));
 
 export {
   wssObj,
   rpcObj,
   idObj,
-  clientStringbyId,
-  clientStringbyName,
   availableNetworks,
+  getClientStringbyId,
+  getClientStringbyName,
+  getNetworkNameByWss,
+  getRpcWithWssString,
 };

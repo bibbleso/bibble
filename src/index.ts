@@ -1,24 +1,41 @@
 import registry from './networks.json';
 import { Registry, Network } from '../types';
 import {
-  wssObj,
-  rpcObj,
-  idObj,
-  clientStringbyId,
-  clientStringbyName,
-  availableNetworks,
-} from './utils';
-
-const Networks: Network[] = registry.networks;
-const Document: Registry = registry;
-
-export {
-  Document as document,
-  Networks as networks,
   wssObj as wss,
   rpcObj as rpc,
   idObj as id,
-  clientStringbyId,
-  clientStringbyName,
   availableNetworks,
+  getClientStringbyId,
+  getClientStringbyName,
+  getNetworkNameByWss,
+  getRpcWithWssString,
+} from './utils';
+
+const networks: Network[] = registry.networks;
+const document: Registry = registry;
+
+export {
+  document,
+  networks,
+  wss,
+  rpc,
+  id,
+  availableNetworks,
+  getClientStringbyId,
+  getClientStringbyName,
+  getNetworkNameByWss,
+  getRpcWithWssString,
+};
+
+export default {
+  document,
+  networks,
+  wss,
+  rpc,
+  id,
+  availableNetworks,
+  getClientStringbyId,
+  getClientStringbyName,
+  getNetworkNameByWss,
+  getRpcWithWssString,
 };
