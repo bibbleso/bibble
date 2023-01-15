@@ -1,6 +1,6 @@
 {
   "name": "bibble",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This is an open source registry of networks and side-chains within the XRPL ecosystem",
   "repository": "https://github.com/bibbleso/xrpl-network-registry.git",
   "author": "interc0der <intercoder@whirled.io>",
