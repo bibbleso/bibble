@@ -21,6 +21,26 @@ networks.forEach((network: Network) => {
 
 const wssObj = Object.fromEntries(wssMap);
 
+const allWss = new Map();
+networks.forEach((network: Network) => {
+  if (typeof network.wss === 'string' || !network.wss)
+    return allWss.set(network.name, network.wss);
+  return network.wss.forEach((wss) => {
+    if (!allWss.get(network.name)) allWss.set(network.name, [wss]);
+    if (allWss.get(network.name))
+      allWss.set(network.name, [wss, ...allWss.get(network.name)]);
+  });
+});
+
+const allWssSwap = new Map();
+networks.forEach((network: Network) => {
+  if (typeof network.wss === 'string' || !network.wss)
+    return allWssSwap.set(network.wss, network.name);
+  return network.wss.forEach((wss) => {
+    allWssSwap.set(wss, network.name);
+  });
+});
+
 // instantiate usable map of rpc
 const rpcMap: Map<string, string | null | undefined> = new Map();
 networks.forEach((network: Network) => {
@@ -29,6 +49,26 @@ networks.forEach((network: Network) => {
   return rpcMap.set(network.name, network.rpc[0]);
 });
 const rpcObj = Object.fromEntries(rpcMap);
+
+const allRpc = new Map();
+networks.forEach((network: Network) => {
+  if (typeof network.rpc === 'string' || !network.rpc)
+    return allRpc.set(network.name, network.rpc);
+  return network.rpc.forEach((rpc) => {
+    if (!allRpc.get(network.name)) allRpc.set(network.name, [rpc]);
+    if (allRpc.get(network.name))
+      allRpc.set(network.name, [rpc, ...allRpc.get(network.name)]);
+  });
+});
+
+const allRpcSwap = new Map();
+networks.forEach((network: Network) => {
+  if (typeof network.rpc === 'string' || !network.rpc)
+    return allRpcSwap.set(network.rpc, network.name);
+  return network.rpc.forEach((rpc) => {
+    allRpcSwap.set(rpc, network.name);
+  });
+});
 
 // instantiate usable map of id
 const idMap: Map<string, number | null> = new Map();
@@ -53,11 +93,15 @@ const getClientStringbyName = (name: string): string | undefined | null =>
 
 // find network by wss
 const getNetworkNameByWss = (wss: string): string | undefined | null =>
-  getKey(wssMap, wss);
+  allWssSwap.get(wss);
+
+// find network by rpc
+const getNetworkNameByRPC = (rpc: string): string | undefined | null =>
+  allRpcSwap.get(rpc);
 
 // find network by wss
 const getRpcWithWssString = (wss: string): string | undefined | null =>
-  rpcMap.get(getKey(wssMap, wss));
+  rpcMap.get(allWssSwap.get(wss));
 
 export {
   wssObj,
@@ -68,4 +112,5 @@ export {
   getClientStringbyName,
   getNetworkNameByWss,
   getRpcWithWssString,
+  getNetworkNameByRPC,
 };

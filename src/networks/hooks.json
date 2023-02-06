@@ -8,15 +8,15 @@
   "rpc": ["https://hooks-testnet-v2.xrpl-labs.com"],
   "docs": [
     "https://xrpl-hooks.readme.io",
-    "https://hooks-testnet-v2.xrpl-labs.com/"
+    "https://hooks-testnet-v2.xrpl-labs.com"
   ],
   "qr": "https://xumm.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8cf85d25-b3ad-4241-99ab-f6172b93b193%2FqrCode_(7).png?table=block&id=2af80da7-875d-49cc-b1da-78fec65ff3b6&spaceId=eb8866e3-4311-4e85-a4c2-0ecfe166ea3c&width=290&userId=&cache=v2",
-  "explorer": "https://hooks-testnet-v2-explorer.xrpl-labs.com/",
+  "explorer": "https://hooks-testnet-v2-explorer.xrpl-labs.com",
   "repo": "https://github.com/XRPL-Labs/xrpld-hooks",
   "faucet": null,
   "vl": {
     "default": {
-      "site": "https://vl.beta.bithomp.com/",
+      "site": "https://vl.beta.bithomp.com",
       "key": [
         "EDED8F699B46702A9ACD8D6C39ECB1C627842554C88BCFCCAF5F907FEB92A7B5E9"
       ]

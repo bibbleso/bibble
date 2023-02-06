@@ -19,6 +19,7 @@ jobs:
       - name: Build package
         run: |
           npm install
+          npm run c
       - name: Publish package on NPM 📦
         run: npm publish
         env:

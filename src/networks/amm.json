@@ -6,7 +6,7 @@
   "desc": "A preview of the XLS-30d standard for a native AMM on the XRP Ledger.",
   "wss": ["wss://amm.devnet.rippletest.net:51233"],
   "rpc": ["http://amm.devnet.rippletest.net:51234"],
-  "explorer": "https://amm.bithomp.com/",
+  "explorer": "https://amm.bithomp.com",
   "faucet": "https://faucet.amm.rippletest.net/accounts",
   "repo": "https://github.com/XRPLF/rippled/tree/amm",
   "docs": [

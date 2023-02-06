@@ -9,6 +9,7 @@ import {
   getClientStringbyName,
   getNetworkNameByWss,
   getRpcWithWssString,
+  getNetworkNameByRPC,
 } from './utils';
 
 const networks: Network[] = registry.networks;
@@ -25,6 +26,7 @@ export {
   getClientStringbyName,
   getNetworkNameByWss,
   getRpcWithWssString,
+  getNetworkNameByRPC,
 };
 
 export default {
@@ -38,4 +40,5 @@ export default {
   getClientStringbyName,
   getNetworkNameByWss,
   getRpcWithWssString,
+  getNetworkNameByRPC,
 };
