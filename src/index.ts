@@ -1,11 +1,12 @@
 import registry from './networks.json';
 import { Registry, Network } from '../types';
+import { obj as wss } from './utils/wss';
+import { obj as rpc } from './utils/rpc';
+import { obj as id } from './utils/id';
+import { obj as status } from './utils/status';
+import { obj as type } from './utils/type';
+import { obj as dir } from './utils/dir';
 import {
-  wssObj as wss,
-  rpcObj as rpc,
-  idObj as id,
-  statusObj as status,
-  typeObj as type,
   availableNetworks,
   getClientStringbyId,
   getClientStringbyName,
@@ -16,6 +17,13 @@ import {
 } from './utils';
 
 const networks: Network[] = registry.networks;
+
+/**
+ * The full xrpl network registry - community driven.
+ * This might be useful for user-specific parsing and general bookkeeping.
+ *
+ * @link https://github.com/bibbleso/bibble/blob/main/src/networks.json
+ */
 const document: Registry = registry;
 
 export {
@@ -24,6 +32,7 @@ export {
   wss,
   rpc,
   id,
+  dir,
   status,
   type,
   availableNetworks,
@@ -35,6 +44,7 @@ export {
   getNetworkNameByRPC,
 };
 
+/** @hidden */
 export default {
   document,
   networks,
@@ -43,6 +53,7 @@ export default {
   id,
   status,
   type,
+  dir,
   availableNetworks,
   isValid,
   getClientStringbyId,

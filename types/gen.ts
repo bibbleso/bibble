@@ -1,3 +1,5 @@
+import { Network } from './networks';
+
 export interface NetworkObjType {
   mainnet: string | null;
   testnet: string | null;
@@ -8,12 +10,12 @@ export interface NetworkObjType {
   xevm: string | null;
 }
 
-export const networkDefaultObj = {
-  mainnet: null,
-  testnet: null,
-  devnet: null,
-  xls20: null,
-  hooks: null,
-  amm: null,
-  xevm: null,
-};
+export interface NetworkType {
+  mainnet: Network;
+  testnet: Network;
+  devnet: Network;
+  xls20: Network;
+  hooks: Network;
+  amm: Network;
+  xevm: Network;
+}
