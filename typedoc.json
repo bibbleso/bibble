@@ -1,5 +1,10 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "entryPoints": ["./src/index.ts", "./types/index.ts"],
+  "entryPointStrategy": "packages",
+  "entryPoints": [
+    "packages/xrpl-networks",
+    "packages/xrpl-tokens",
+    "packages/xrpl-collections"
+  ],
   "out": "docs"
 }

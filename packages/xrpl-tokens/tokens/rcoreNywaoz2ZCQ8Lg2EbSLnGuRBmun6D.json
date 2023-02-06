@@ -1,0 +1,43 @@
+{
+  "id": 0,
+  "name": "mainnet",
+  "type": "main",
+  "status": "live",
+  "desc": "The XRP Ledger, a decentralized cryptographic ledger powered by a network of peer-to-peer servers and the home of XRP.",
+  "wss": [
+    "wss://xrplcluster.com",
+    "wss://xrpl.ws",
+    "wss://s1.ripple.com",
+    "wss://s2.ripple.com",
+    "wss://x1.sologenic.org"
+  ],
+  "rpc": [
+    "https://xrplcluster.com",
+    "https://xrpl.ws",
+    "https://s1.ripple.com:51234",
+    "https://s2.ripple.com:51234"
+  ],
+  "explorer": "https://bithomp.com/explorer",
+  "repo": "https://github.com/XRPLF/rippled/tree/master",
+  "faucet": null,
+  "vl": {
+    "ripple": {
+      "site": "https://vl.ripple.com",
+      "key": [
+        "ED2677ABFFD1B33AC6FBC3062B71F1E8397C1505E1C42C64D11AD1B28FF73F4734"
+      ]
+    },
+    "xrplf": {
+      "site": "https://vl.xrplf.org",
+      "key": [
+        "ED45D1840EE724BE327ABE9146503D5848EFD5F38B6D5FEDE71E80ACCE5E6E738B"
+      ]
+    },
+    "coil": {
+      "site": "https://vl.coil.com/",
+      "key": [
+        "ED307A760EE34F2D0CAA103377B1969117C38B8AA0AA1E2A24DAC1F32FC97087ED"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": null,
+  "name": "amm",
+  "type": "development",
+  "status": "live",
+  "desc": "A preview of the XLS-30d standard for a native AMM on the XRP Ledger.",
+  "wss": ["wss://amm.devnet.rippletest.net:51233"],
+  "rpc": ["http://amm.devnet.rippletest.net:51234"],
+  "explorer": "https://amm.bithomp.com",
+  "faucet": "https://faucet.amm.rippletest.net/accounts",
+  "repo": "https://github.com/XRPLF/rippled/tree/amm",
+  "docs": [
+    "https://xrpl.org/label-amm.html",
+    "https://dev.to/ripplexdev/xrpl-amm-network-available-for-testing-and-development-426i"
+  ],
+  "vl": {
+    "default": {
+      "site": "https://vlamm.devnet.rippletest.net",
+      "key": [
+        "03553F67DC5A6FE0EBFE1B3B4742833D14AF7C65E79E5760EC76EC56EAFD254CE9"
+      ]
+    }
+  }
+}

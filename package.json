@@ -1,7 +1,7 @@
 {
-  "name": "bibble",
-  "version": "0.1.6",
-  "description": "This is an open source registry of networks and side-chains within the XRPL ecosystem",
+  "name": "xrpl.fyi",
+  "version": "0.0.1-beta",
+  "description": "This is an open-source registry of networks and side-chains within the XRPL ecosystem",
   "repository": "https://github.com/bibbleso/bibble.git",
   "author": "interc0der <intercoder@whirled.io>",
   "license": "MIT",
@@ -12,6 +12,9 @@
   "types": "dist/src/index.d.ts",
   "files": [
     "dist"
+  ],
+  "workspaces": [
+    "./packages/*"
   ],
   "scripts": {
     "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
