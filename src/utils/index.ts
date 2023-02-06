@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { Network } from '../../types/networks';
 import registry from '../networks.json';
+import { NetworkObjType, networkDefaultObj } from '../../types/gen';
 
 // read all networks json
 export const networks = registry.networks;
@@ -12,14 +13,15 @@ const availableNetworks: string[] | undefined = networks.map(
 
 // instantiate usable map of wss
 const wssMap: Map<string, string | null | undefined> = new Map();
+const wssObj: NetworkObjType = Object.create(networkDefaultObj);
 networks.forEach((network: Network) => {
   if (typeof network.wss === 'string' || !network.wss) {
+    wssObj[network.name] = network.wss;
     return wssMap.set(network.name, network.wss);
   }
+  wssObj[network.name] = network.wss[0];
   return wssMap.set(network.name, network.wss[0]);
 });
-
-const wssObj = Object.fromEntries(wssMap);
 
 const allWss = new Map();
 networks.forEach((network: Network) => {
@@ -43,12 +45,15 @@ networks.forEach((network: Network) => {
 
 // instantiate usable map of rpc
 const rpcMap: Map<string, string | null | undefined> = new Map();
+const rpcObj: NetworkObjType = Object.create(networkDefaultObj);
 networks.forEach((network: Network) => {
-  if (typeof network.rpc === 'string' || !network.rpc)
+  if (typeof network.rpc === 'string' || !network.rpc) {
+    rpcObj[network.name] = network.rpc;
     return rpcMap.set(network.name, network.rpc);
+  }
+  rpcObj[network.name] = network.rpc[0];
   return rpcMap.set(network.name, network.rpc[0]);
 });
-const rpcObj = Object.fromEntries(rpcMap);
 
 const allRpc = new Map();
 networks.forEach((network: Network) => {
@@ -72,10 +77,27 @@ networks.forEach((network: Network) => {
 
 // instantiate usable map of id
 const idMap: Map<string, number | null> = new Map();
+const idObj: NetworkObjType = Object.create(networkDefaultObj);
 networks.forEach((network: Network) => {
+  idObj[network.name] = network.id;
   return idMap.set(network.name, network.id);
 });
-const idObj = Object.fromEntries(idMap);
+
+// instantiate usable map of status
+const statusMap: Map<string, string | null> = new Map();
+const statusObj: NetworkObjType = Object.create(networkDefaultObj);
+networks.forEach((network: Network) => {
+  statusObj[network.name] = network.status;
+  return statusMap.set(network.name, network.status);
+});
+
+// instantiate usable map of type
+const typeMap: Map<string, string | null> = new Map();
+const typeObj: NetworkObjType = Object.create(networkDefaultObj);
+networks.forEach((network: Network) => {
+  typeObj[network.name] = network.type;
+  return typeMap.set(network.name, network.type);
+});
 
 const getKey: any = (map: Map<any, any>, value: any): any => {
   for (let [k, v] of map.entries()) {
@@ -103,14 +125,23 @@ const getNetworkNameByRPC = (rpc: string): string | undefined | null =>
 const getRpcWithWssString = (wss: string): string | undefined | null =>
   rpcMap.get(allWssSwap.get(wss));
 
+// determine if client string is valid
+const isValid = (s: string): boolean => {
+  if (allRpcSwap.get(s) || allWssSwap.get(s)) return true;
+  return false;
+};
+
 export {
   wssObj,
   rpcObj,
   idObj,
+  statusObj,
+  typeObj,
   availableNetworks,
   getClientStringbyId,
   getClientStringbyName,
   getNetworkNameByWss,
   getRpcWithWssString,
   getNetworkNameByRPC,
+  isValid,
 };
