@@ -1,8 +1,17 @@
 {
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
   "files": [],
   "references": [
     { "path": "packages/xrpl-networks" },
     { "path": "packages/xrpl-tokens" },
     { "path": "packages/xrpl-collections" }
+  ],
+  "include": [
+    "packages/xrpl-networks/src",
+    "packages/xrpl-tokens/src",
+    "packages/xrpl-collections/src"
   ]
 }

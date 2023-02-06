@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
-    "c": "rm -rf ./dist && yarn gen:json && yarn gen:types && yarn format && yarn gen:docs && tsc",
+    "c": "rm -rf ./dist && yarn format && yarn gen:docs && tsc",
     "gen:json": "yarn ts-node ./scripts/index.ts",
     "gen:types": "yarn ts-node ./scripts/genType.ts",
     "gen:docs": "npx typedoc --options typedoc.json",

@@ -1,9 +1,9 @@
 {
-  "name": "xrpl-dir",
+  "name": "xrpl-networks",
   "version": "0.0.1-beta",
   "typedoc": {
-    "entryPoints": ["./src/index.ts", "./types/index.ts"],
+    "entryPoints": ["./src/index.ts"],
     "readmeFile": "./README.md",
-    "displayName": "xrpl dir"
+    "displayName": "xrpl networks"
   }
 }

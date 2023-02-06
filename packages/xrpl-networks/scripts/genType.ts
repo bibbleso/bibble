@@ -31,4 +31,4 @@ const content = [
   '}',
 ].join('\n');
 
-fs.writeFileSync(path.join(__dirname, '..', 'types', 'gen.ts'), content);
+fs.writeFileSync(path.join(__dirname, '..', 'src', 'types', 'gen.ts'), content);
