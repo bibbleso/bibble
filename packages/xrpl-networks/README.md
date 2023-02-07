@@ -1,6 +1,6 @@
 # bibble
 
-### a open-source registry of xrpl networks
+### an open-source registry of xrpl networks
 
 [![NPM](https://nodei.co/npm/xrpl.png)](https://www.npmjs.com/package/bibble)
 
@@ -8,9 +8,11 @@
 
 ## Introduction
 
-This package was originally created to make using RPC endpoints more accessible with the current tooling that has been developered for the XRP Ledger. To date, tooling (xrpl.js to note) has been built to support only secured websockets. In some circomstances, this could be limiting and it is even worse if you need to work with both wss clients and RPC endpoint, simultaneously.
+This package was originally created to make using RPC endpoints more accessible with the current tooling that has been developered for the XRP Ledger. To date, tooling (xrpl.js to note) has been built to support only secured websockets. In some circomstances, this could be limiting, and even worse if you need to work with both wss clients and RPC endpoints, simultaneously.
 
 This package is built to make it easier to go back and forth betweem client strings. It also serves as a community-driven registry of XRPL parallel networks and sidechains within the ecosystem.
+
+If you would like to add a new paralle; network or sidechain to the registry, see the [Contributing Guidelines](./CONTRIBUTING.md)
 
 ## Getting Started
 
@@ -42,3 +44,9 @@ const main = async () => {
 };
 main();
 ```
+
+## [Contributing Guidelines](./CONTRIBUTING.md)
+
+This package will have significantly more value if the community helps to keep the registry up-to-date. Please do not hesitate to create pull request will a new network.
+
+See [Contributing Guidelines](./CONTRIBUTING.md) for more information.
