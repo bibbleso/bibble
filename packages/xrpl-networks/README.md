@@ -12,7 +12,7 @@ This package was originally created to make using RPC endpoints more accessible 
 
 This package is built to make it easier to go back and forth betweem client strings. It also serves as a community-driven registry of XRPL parallel networks and sidechains within the ecosystem.
 
-If you would like to add a new paralle; network or sidechain to the registry, see the [Contributing Guidelines](./CONTRIBUTING.md)
+If you would like to add a new paralle; network or sidechain to the registry, see the [Contributing Guidelines](https://github.com/bibbleso/bibble/blob/main/packages/xrpl-networks/CONTRIBUTING.md)
 
 ## Getting Started
 
@@ -45,8 +45,8 @@ const main = async () => {
 main();
 ```
 
-## [Contributing Guidelines](./CONTRIBUTING.md)
+## [Contributing Guidelines](https://github.com/bibbleso/bibble/blob/main/packages/xrpl-networks/CONTRIBUTING.md)
 
 This package will have significantly more value if the community helps to keep the registry up-to-date. Please do not hesitate to create pull request will a new network.
 
-See [Contributing Guidelines](./CONTRIBUTING.md) for more information.
+See [Contributing Guidelines](https://github.com/bibbleso/bibble/blob/main/packages/xrpl-networks/CONTRIBUTING.md) for more information.
