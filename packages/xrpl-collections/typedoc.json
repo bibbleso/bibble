@@ -1,9 +1,0 @@
-{
-  "name": "xrpl-collections",
-  "version": "0.0.1-beta",
-  "typedoc": {
-    "entryPoints": ["./src/index.ts", "./types/index.ts"],
-    "readmeFile": "./README.md",
-    "displayName": "xrpl collections"
-  }
-}
