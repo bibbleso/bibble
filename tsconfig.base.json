@@ -111,7 +111,7 @@
     "preserveSymlinks": true,
 
     "paths": {
-      "@xrpl-dir/src": ["packages/xrpl-dir/src"]
+      "@xrpl-networks/src": ["packages/xrpl-networks/src"]
     }
   },
   "exclude": ["**/node_modules", "**/dist", "**/tests", "**/scripts"]

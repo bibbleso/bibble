@@ -6,5 +6,6 @@
     "packages/xrpl-tokens",
     "packages/xrpl-collections"
   ],
+  "readme": "./README.md",
   "out": "docs"
 }
